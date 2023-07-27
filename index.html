@@ -89,28 +89,68 @@
   <banner class="my-10">
     <div class="carousel w-full">
       <div id="slide1" class="carousel-item relative w-full">
-        <img src="/images/banner1.png" class="w-full" />
+        <div class="hero min-h-screen bg-gradient-to-r from-[#121212] to-[#12121200]"
+          style="background-image: url(images/banner1.png);">
+          <div class="hero-overlay bg-opacity-60"></div>
+          <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-md">
+              <h1 class="mb-5 text-6xl font-extrabold">Exotic tastes at your doorstep</h1>
+              <p class="mb-5">We supply highly quality organic products</p>
+              <button class="btn bg-background-color text-white">Shop Now</button>
+            </div>
+          </div>
+        </div>
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide4" class="btn btn-circle">❮</a>
           <a href="#slide2" class="btn btn-circle">❯</a>
         </div>
       </div>
       <div id="slide2" class="carousel-item relative w-full">
-        <img src="/images/banner2.png" class="w-full" />
+        <div class="hero min-h-screen bg-gradient-to-r from-[#121212] to-[#12121200]"
+          style="background-image: url(images/banner2.png);">
+          <div class="hero-overlay bg-opacity-60"></div>
+          <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-md">
+              <h1 class="mb-5 text-6xl font-extrabold">Exotic tastes at your doorstep</h1>
+              <p class="mb-5">We supply highly quality organic products</p>
+              <button class="btn bg-background-color text-white"> Shop Now</button>
+            </div>
+          </div>
+        </div>
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide1" class="btn btn-circle">❮</a>
           <a href="#slide3" class="btn btn-circle">❯</a>
         </div>
       </div>
       <div id="slide3" class="carousel-item relative w-full">
-        <img src="/images/banner3.png" class="w-full" />
+        <div class="hero min-h-screen bg-gradient-to-r from-[#121212] to-[#12121200]"
+          style="background-image: url(images/banner3.png);">
+          <div class="hero-overlay bg-opacity-60"></div>
+          <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-md">
+              <h1 class="mb-5 text-6xl font-extrabold">Exotic tastes at your doorstep</h1>
+              <p class="mb-5">We supply highly quality organic products</p>
+              <button class="btn bg-background-color text-white">Shop Now</button>
+            </div>
+          </div>
+        </div>
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide2" class="btn btn-circle">❮</a>
           <a href="#slide4" class="btn btn-circle">❯</a>
         </div>
       </div>
       <div id="slide4" class="carousel-item relative w-full">
-        <img src="/images/banner4.png" class="w-full" />
+        <div class="hero min-h-screen bg-gradient-to-r from-[#121212] to-[#12121200]"
+          style="background-image: url(images/banner4.png);">
+          <div class="hero-overlay bg-opacity-60"></div>
+          <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-md">
+              <h1 class="mb-5 text-6xl font-extrabold">Exotic tastes at your doorstep</h1>
+              <p class="mb-5">We supply highly quality organic products</p>
+              <button class="btn bg-background-color text-white">Shop Now</button>
+            </div>
+          </div>
+        </div>
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide3" class="btn btn-circle">❮</a>
           <a href="#slide1" class="btn btn-circle">❯</a>
@@ -131,7 +171,7 @@
           making it over 2000 years old.</p>
       </div>
       <div>
-        <div class="grid grid-flow-col gap-2 text-center auto-cols-max">
+        <div class="grid grid-flow-col gap-2 text-center md:justify-center auto-cols-max">
           <div class="flex flex-col">
             <span class="countdown font-mono text-5xl">
               <span style="--value:15;"></span>
@@ -199,7 +239,31 @@
             <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
           </div>
           <div class="card-actions text-background-color">
-            <a href="">Details</a>
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="button" onclick="my_modal_1.showModal()">Details</button>
+            <dialog id="my_modal_1" class="modal">
+              <form method="dialog" class="modal-box">
+                <div class="card w-96 bg-white-400 shadow-xl rounded-lg border-solid border-blue-300">
+                  <figure class="px-10 pt-10">
+                    <img src="/images/fruit6.png" alt="" class="rounded-xl" />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <p class="text-black text-3xl font-extrabold">Apple</p>
+                    <p class="text-black">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                    <div class="rating">
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                    <div class="modal-action gap-x-5">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn text-background-color border-background-color">Close</button>
+                      <button class="btn bg-background-color">Buy Now </button>
+                    </div>
+              </form>
+            </dialog>
           </div>
         </div>
       </div>
@@ -219,7 +283,31 @@
             <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
           </div>
           <div class="card-actions text-background-color">
-            <a href="">Details</a>
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="button" onclick="my_modal_2.showModal()">Details</button>
+            <dialog id="my_modal_2" class="modal">
+              <form method="dialog" class="modal-box">
+                <div class="card w-96 bg-white-400 shadow-xl rounded-lg border-solid border-blue-300">
+                  <figure class="px-10 pt-10">
+                    <img src="/images/fruit7.png" alt="" class="rounded-xl" />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <p class="text-black text-3xl font-extrabold">Orange</p>
+                    <p class="text-black">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                    <div class="rating">
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                    <div class="modal-action gap-x-5">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn text-background-color border-background-color">Close</button>
+                      <button class="btn bg-background-color">Buy Now </button>
+                    </div>
+              </form>
+            </dialog>
           </div>
         </div>
       </div>
@@ -239,7 +327,32 @@
             <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
           </div>
           <div class="card-actions text-background-color">
-            <a href="">Details</a>
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="button" onclick="my_modal_3.showModal()">Details</button>
+            <dialog id="my_modal_3" class="modal">
+              <form method="dialog" class="modal-box">
+                <div class="card w-96 bg-white-400 shadow-xl rounded-lg border-solid border-blue-300">
+                  <figure class="px-10 pt-10">
+                    <img src="/images/fruit8.png" alt="" class="rounded-xl" />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <p class="text-black text-3xl font-extrabold">Red Dragon</p>
+                    <p class="text-black">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                    <div class="rating">
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                <div class="modal-action gap-x-5">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn text-background-color border-background-color">Close</button>
+                  <button class="btn bg-background-color">Buy Now </button>
+                </div>
+              </form>
+            </dialog>
+           
           </div>
         </div>
       </div>
@@ -259,13 +372,37 @@
             <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
           </div>
           <div class="card-actions text-background-color">
-            <a href="">Details</a>
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="button" onclick="my_modal_4.showModal()">Details</button>
+            <dialog id="my_modal_4" class="modal">
+              <form method="dialog" class="modal-box">
+                <div class="card w-96 bg-white-400 shadow-xl rounded-lg border-solid border-blue-300">
+                  <figure class="px-10 pt-10">
+                    <img src="/images/fruit9.png" alt="" class="rounded-xl" />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <p class="text-black text-3xl font-extrabold">Banana</p>
+                    <p class="text-black">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                    <div class="rating">
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                    <div class="modal-action gap-x-5">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn text-background-color border-background-color">Close</button>
+                      <button class="btn bg-background-color">Buy Now </button>
+                    </div>
+              </form>
+            </dialog>
           </div>
         </div>
       </div>
     </div>
     <div class="flex justify-center mb-20">
-      <button class="btn btn-secondary">Shop All</button>
+      <button class="btn btn-secondary bg-background-color">Shop All</button>
     </div>
 
     <!-- Team section -->
@@ -328,7 +465,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="">
       <!-- fruts about -->
       <div class="text-center mt-20 mb-4">
         <h3 class="text-4xl font-extrabold">Why Choose Us</h3>
@@ -380,7 +517,7 @@
               <h2 class=" h2 text-2xl font-bold">Sustainable Practice</h2>
               <p>Professional employees are there for you to pick<br> the most amazing and fresh fruits.</p>
             </div>
-            <div> <img src="images/ice-cream 1.png" alt=""></div>
+            <div > <img  src="images/ice-cream 1.png" alt=""></div>
           </div>
           <div class="lg:flex gap-4 text-center lg:text-end pl-5">
             <div>
